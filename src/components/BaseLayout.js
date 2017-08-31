@@ -1,11 +1,15 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default class BaseLayout extends Component {
   render(){
 
+    let body = {
+      fontSize: "1em"
+    }
+
     let header = {
-      backgroundColor: "gray",
+      backgroundColor: "lightgray",
       height: 75
     }
 
@@ -30,25 +34,25 @@ export default class BaseLayout extends Component {
       textDecoration: "none"
     }
 
-    let footerStyle = {
+    let footer = {
       textAlign: "center",
-      backgroundColor: "gray",
+      backgroundColor: "lightgray",
       height: 50,
       margin: "0 auto"
     }
 
     return(
-      <div>
+      <div style ={body}>
         <div style={header}>
           <ul style={ul}>
             <li style={li}>
-              <Link to="/" style={link}>Home</Link>
+              <NavLink to="/" style={link}>Home</NavLink>
             </li>
-            <li style={liStyle}>
-              <Link to="/about" style={link}>About</Link>
+            <li style={li}>
+              <NavLink to="/about" style={link}>About</NavLink>
             </li>
-            <li style={liStyle}>
-              <Link to="/portfolio" style={link}>Portfolio</Link>
+            <li style={li}>
+              <NavLink to="/portfolio" style={link}>Portfolio</NavLink>
             </li>
           </ul>
         </div>
