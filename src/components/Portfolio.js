@@ -12,9 +12,9 @@ export default class Portfolio extends Component {
   return(
     <div>
       <h1 style={{textAlign: "center", color: "#FF4571"}}>"Brandon Walden's Portfolio"</h1>
-      <div>
-        <img src={require('../images/LakeProfilePicSmall.jpg')} alt="" style={{width: "50%", borderRadius: "5%"}}/>
-      <ul style={liStyle}>
+      <div style={{textAlign:"center"}}>
+        <img src={require('../images/LakeProfilePicSmall.jpg')} alt="" style={{width: "50%", borderRadius: "90%"}}/>
+      <ul style={ul}>
         <li>The Iron Yard Orlando</li>
         <li>Projects</li>
       </ul>

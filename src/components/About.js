@@ -3,8 +3,8 @@ import React, {Component} from 'react';
 export default class About extends Component {
   render(){
 
-    let liStyle = {
-      color: "#E5B13A",
+    let ul = {
+      color: "#FF4571",
       fontSize: 14,
       textAlign: "center",
       listStyle: "none"
@@ -12,14 +12,13 @@ export default class About extends Component {
 
     return(
       <div>
-        <h1 style={{textAlign: "center", color: "#E5B13A"}}>About</h1>
-        <br />
-        <div>
-          <img src={require('../images/LakeProfilePicSmall.jpg')} alt="" style={{width: "40%", borderRadius: "30%"}}/>
+        <h1 style={{textAlign: "center", color: "#FF4571"}}>About</h1>
+        <div style={{textAlign:"center"}}>
+          <img src={require('../images/LakeProfilePicSmall.jpg')} alt="" style={{width: "50%", borderRadius: "90%"}}/>
         </div>
-        <ul style={liStyle}>
+        <ul style={ul}>
           <li>Developer</li>
-          <li>Sales Profession</li>
+          <li>Sales Professional</li>
           <li>Artist</li>
         </ul>
       </div>
