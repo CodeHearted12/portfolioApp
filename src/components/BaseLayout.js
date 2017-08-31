@@ -4,59 +4,58 @@ import { Link } from 'react-router-dom';
 export default class BaseLayout extends Component {
   render(){
 
-    let headerStyle = {
+    let header = {
       backgroundColor: "gray",
-      height: 70
+      height: 75
     }
 
-    let ulStyle = {
+    let ul = {
       listStyle: "none",
-      margin: 0,
       padding: 26,
+      margin: 0
     }
 
-    let liStyle = {
+    let li = {
       display: "inline",
-      marginTop: "15px"
+      marginTop: "20px"
     }
 
-    let linkStyle = {
-      border: "1px solid #E5B13A",
-      borderRadius: 90,
-      padding: "15px",
-      marginRight: "10px",
-      textDecoration: "none",
-      color: "#E5B13A",
+    let link = {
+      color: "#FF4571",
       backgroundColor: "black",
-
+      border: "1px solid #FF4571",
+      borderRadius: 75,
+      padding: "20px",
+      marginRight: "15px",
+      textDecoration: "none"
     }
 
     let footerStyle = {
       textAlign: "center",
-      backgroundColor: "lightgray",
-      height: 40,
+      backgroundColor: "gray",
+      height: 50,
       margin: "0 auto"
     }
 
     return(
       <div>
-        <div style={headerStyle}>
-          <ul style={ulStyle}>
-            <li style={liStyle}>
-              <Link to="/" style={linkStyle}>Home</Link>
+        <div style={header}>
+          <ul style={ul}>
+            <li style={li}>
+              <Link to="/" style={link}>Home</Link>
             </li>
             <li style={liStyle}>
-              <Link to="/about" style={linkStyle}>About</Link>
+              <Link to="/about" style={link}>About</Link>
             </li>
             <li style={liStyle}>
-              <Link to="/portfolio" style={linkStyle}>Portfolio</Link>
+              <Link to="/portfolio" style={link}>Portfolio</Link>
             </li>
           </ul>
         </div>
-        <div style={{backgroundColor: "black", height: "80vh"}}>
+        <div style={{backgroundColor: "black", height: "75px"}}>
           {this.props.children}
         </div>
-        <footer style={footerStyle}>
+        <footer style={footer}>
         </footer>
       </div>
     );
