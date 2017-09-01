@@ -10,35 +10,39 @@ export default class BaseLayout extends Component {
 
     let header = {
       backgroundColor: "lightgray",
-      height: 75
+      height: 100
     }
 
     let ul = {
       listStyle: "none",
       padding: 26,
-      margin: 0
+      margin: 0,
+      display: "flex",
+      justifyContent: "center"
     }
 
     let li = {
       display: "inline",
-      marginTop: "20px"
+      marginTop: "20px",
+      padding: "10px"
     }
 
     let link = {
-      color: "#FF4571",
-      backgroundColor: "black",
-      border: "1px solid #FF4571",
-      borderRadius: 75,
-      padding: "20px",
-      marginRight: "15px",
+      color: "white",
+      // backgroundColor: "white",
+      // border: "1px solid #FF4571",
+      // borderRadius: 75,
+      // padding: "20px",
+      // marginRight: "15px",
       textDecoration: "none"
     }
 
     let footer = {
       textAlign: "center",
       backgroundColor: "lightgray",
-      height: 50,
-      margin: "0 auto"
+      height: 100,
+      margin: "0 auto",
+      marginTop: "400px"
     }
 
     return(
@@ -46,17 +50,17 @@ export default class BaseLayout extends Component {
         <div style={header}>
           <ul style={ul}>
             <li style={li}>
-              <NavLink to="/" style={link}>Home</NavLink>
+                <NavLink className="myButton" to="/" style={link}>Home</NavLink>
             </li>
             <li style={li}>
-              <NavLink to="/about" style={link}>About</NavLink>
+                <NavLink className="myButton" to="/about" style={link}>About</NavLink>
             </li>
             <li style={li}>
-              <NavLink to="/portfolio" style={link}>Portfolio</NavLink>
+                <NavLink className="myButton" to="/portfolio" style={link}>Portfolio</NavLink>
             </li>
           </ul>
         </div>
-        <div style={{backgroundColor: "black", height: "75px"}}>
+        <div style={{backgroundColor: "black", padding: "10px", height: "100px"}}>
           {this.props.children}
         </div>
         <footer style={footer}>
