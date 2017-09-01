@@ -44,7 +44,7 @@ export default class BaseLayout extends Component {
       margin: "0 auto",
       marginTop: "400px"
     }
-
+    
     return(
       <div style ={body}>
         <div style={header}>
