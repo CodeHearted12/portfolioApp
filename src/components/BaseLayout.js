@@ -10,7 +10,7 @@ export default class BaseLayout extends Component {
 
     let header = {
       backgroundColor: "lightgray",
-      height: 100
+      height: "150px"
     }
 
     let ul = {
@@ -44,7 +44,7 @@ export default class BaseLayout extends Component {
       margin: "0 auto",
       marginTop: "400px"
     }
-    
+
     return(
       <div style ={body}>
         <div style={header}>
@@ -58,9 +58,15 @@ export default class BaseLayout extends Component {
             <li style={li}>
                 <NavLink className="myButton" to="/portfolio" style={link}>Portfolio</NavLink>
             </li>
+            <li style={li}>
+                <NavLink className="myButton" to="/contact" style={link}>Contact</NavLink>
+            </li>
+            <li style={li}>
+                <NavLink className="myButton" to="/references" style={link}>References</NavLink>
+            </li>
           </ul>
         </div>
-        <div style={{backgroundColor: "black", padding: "10px", height: "100px"}}>
+        <div style={{backgroundColor: "black", padding: "10px", paddingBottom: "100px", height: "100px"}}>
           {this.props.children}
         </div>
         <footer style={footer}>
